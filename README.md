@@ -1,5 +1,7 @@
 # Netflix Stock Volatility Forecasting Project
 
+![Stock Price Visualization](Images/img_1.jpg)
+
 ## Overview
 Industry-level data science project for forecasting Netflix stock volatility using time series analysis and machine learning techniques.
 

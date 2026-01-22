@@ -65,10 +65,10 @@ def train_close_prediction_model():
     plt.title('Netflix Stock: Open vs Close Price')
     plt.legend()
     plt.grid(True, alpha=0.3)
-    plt.savefig('Images/open_vs_close_relationship.png', dpi=300, bbox_inches='tight')
+    plt.savefig('analysis/outputs/open_vs_close_relationship.png', dpi=300, bbox_inches='tight')
     plt.show()
     
-    print("✓ Saved open vs close relationship plot to Images/open_vs_close_relationship.png")
+    print("✓ Saved open vs close relationship plot to analysis/outputs/open_vs_close_relationship.png")
     
     return model, X_train, X_test, y_train, y_test, train_mse, test_mse, train_r2, test_r2
 

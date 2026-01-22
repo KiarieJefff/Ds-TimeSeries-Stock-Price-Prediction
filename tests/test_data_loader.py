@@ -5,6 +5,11 @@ Tests for data loading utilities
 import pytest
 import pandas as pd
 import numpy as np
+import sys
+import os
+
+# Add parent directory to path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.utils.data_loader import load_data, validate_data_quality
 
 @pytest.fixture

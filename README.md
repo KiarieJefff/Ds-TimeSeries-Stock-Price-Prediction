@@ -76,27 +76,37 @@ Developed for Quantum Capital Management's trading desk to improve risk-adjusted
 
 ## Quick Start
 
-1. Install dependencies:
+1. **Setup the project** (recommended):
+```bash
+python setup_project.py
+```
+
+2. **Or install dependencies manually**:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run the complete pipeline:
+3. **Run the complete pipeline**:
 ```bash
 python scripts/run_pipeline.py
 ```
 
-3. Run exploratory data analysis:
+4. **Run exploratory data analysis**:
 ```bash
 python analysis/run_eda_analysis.py
 ```
 
-4. Run modeling analysis:
+5. **Run modeling analysis**:
 ```bash
 python analysis/run_modeling_analysis.py
 ```
 
-5. Explore notebooks:
+6. **Validate project anytime**:
+```bash
+python validate_project.py
+```
+
+7. **Explore notebooks**:
 ```bash
 jupyter notebook notebooks/eda/Data_Understanding_2.ipynb
 jupyter notebook notebooks/modeling/modeling.ipynb
@@ -143,6 +153,40 @@ The project generates 12 high-quality visualizations saved in `analysis/outputs/
 
 ## Contributing
 Follow the established directory structure and coding standards. All changes should be tested and documented.
+
+### Quality Assurance
+- Run `python validate_project.py` before submitting changes
+- Ensure all tests pass: `python -m pytest tests/`
+- Update documentation for any new features
+- Follow PEP 8 coding standards
+
+## Project Validation
+
+This project includes comprehensive validation tools:
+
+### Automated Validation
+```bash
+python validate_project.py
+```
+
+Checks:
+- ✅ Project structure completeness
+- ✅ Data integrity and quality
+- ✅ Model consistency and metadata
+- ✅ Visualization outputs
+- ✅ Code imports and functionality
+- ✅ Documentation completeness
+
+### Test Suite
+```bash
+python -m pytest tests/
+```
+
+Tests:
+- Data loading utilities
+- Prediction functions
+- Model validation
+- Feature engineering
 
 ## License
 Internal project for Quantum Capital Management

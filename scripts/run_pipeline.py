@@ -5,6 +5,7 @@ Main pipeline script for Netflix stock volatility forecasting
 import sys
 import os
 import logging
+import pandas as pd
 from pathlib import Path
 
 # Add src to path

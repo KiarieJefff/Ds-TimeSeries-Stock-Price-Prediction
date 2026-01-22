@@ -13,7 +13,7 @@ def train_close_prediction_model():
     """Train a simple model to predict close price from open price"""
     
     # Load the data
-    df = pd.read_csv('NFLX.csv', parse_dates=['Date'])
+    df = pd.read_csv('data/raw/NFLX.csv', parse_dates=['Date'])
     df = df.sort_values('Date').reset_index(drop=True)
     
     print(f"Dataset shape: {df.shape}")
@@ -65,7 +65,10 @@ def train_close_prediction_model():
     plt.title('Netflix Stock: Open vs Close Price')
     plt.legend()
     plt.grid(True, alpha=0.3)
+    plt.savefig('Images/open_vs_close_relationship.png', dpi=300, bbox_inches='tight')
     plt.show()
+    
+    print("✓ Saved open vs close relationship plot to Images/open_vs_close_relationship.png")
     
     return model, X_train, X_test, y_train, y_test, train_mse, test_mse, train_r2, test_r2
 
@@ -147,7 +150,7 @@ def main():
         print(f"Open: ${open_price:6.2f} -> Predicted Close: ${close_pred:6.2f}")
     
     # Calculate prediction accuracy on recent data
-    df = pd.read_csv('NFLX.csv', parse_dates=['Date'])
+    df = pd.read_csv('data/raw/NFLX.csv', parse_dates=['Date'])
     df = df.sort_values('Date').reset_index(drop=True)
     recent_data = df.tail(50)  # Last 50 trading days
     recent_open = recent_data['Open'].values.reshape(-1, 1)

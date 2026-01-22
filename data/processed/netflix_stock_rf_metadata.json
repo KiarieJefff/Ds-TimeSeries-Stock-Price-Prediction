@@ -1,0 +1,90 @@
+{
+    "model_name": "Random Forest",
+    "model_type": "sklearn.ensemble.RandomForestRegressor",
+    "training_date": "2026-01-22 12:35:00",
+    "performance_metrics": {
+        "RMSE": 0.03089669718979069,
+        "MAE": 0.020080474195124508,
+        "R\u00b2": 0.0022517037146383423,
+        "Directional_Accuracy": 0.503125
+    },
+    "composite_score": 0.9262161662196278,
+    "model_parameters": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_split": 5,
+        "min_samples_leaf": 2,
+        "random_state": 42
+    },
+    "feature_columns": [
+        "Volume",
+        "log_return",
+        "hl_range",
+        "oc_return",
+        "price_change",
+        "log_volume",
+        "volume_change",
+        "ma_5",
+        "volume_ma_5",
+        "ma_10",
+        "volume_ma_10",
+        "ma_20",
+        "volume_ma_20",
+        "ma_50",
+        "volume_ma_50",
+        "volatility_5",
+        "volatility_20",
+        "rsi_14",
+        "momentum_5",
+        "lag_1",
+        "lag_2",
+        "lag_3",
+        "lag_5",
+        "lag_10",
+        "day_of_week",
+        "month",
+        "quarter"
+    ],
+    "top_features": [
+        {
+            "feature": "volume_change",
+            "importance": 0.09438567325924146
+        },
+        {
+            "feature": "ma_5",
+            "importance": 0.07808041563764803
+        },
+        {
+            "feature": "ma_10",
+            "importance": 0.06477278821554246
+        },
+        {
+            "feature": "hl_range",
+            "importance": 0.06274221184871187
+        },
+        {
+            "feature": "lag_3",
+            "importance": 0.0625288496242847
+        },
+        {
+            "feature": "oc_return",
+            "importance": 0.05969535046048939
+        },
+        {
+            "feature": "lag_10",
+            "importance": 0.05285847123893622
+        },
+        {
+            "feature": "lag_5",
+            "importance": 0.044716818917855096
+        },
+        {
+            "feature": "log_volume",
+            "importance": 0.04278415984490838
+        },
+        {
+            "feature": "lag_2",
+            "importance": 0.04175556603564023
+        }
+    ]
+}

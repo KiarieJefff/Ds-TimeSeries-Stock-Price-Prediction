@@ -1,0 +1,66 @@
+# Netflix Stock Volatility Forecasting Configuration
+
+# Data Configuration
+data:
+  raw_data_path: "data/raw/NFLX.csv"
+  processed_data_path: "data/processed/"
+  external_data_path: "data/external/"
+  date_column: "Date"
+  target_column: "Close"
+  
+# Feature Engineering
+features:
+  lookback_periods: [5, 10, 20, 50]
+  volatility_windows: [10, 20, 30]
+  technical_indicators:
+    - "sma"
+    - "ema"
+    - "rsi"
+    - "macd"
+    - "bollinger_bands"
+  
+# Model Configuration
+models:
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+  linear_regression:
+    fit_intercept: true
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    
+# Training Configuration
+training:
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  cross_validation_folds: 5
+  
+# Evaluation Metrics
+evaluation:
+  metrics:
+    - "mse"
+    - "rmse"
+    - "mae"
+    - "r2"
+    - "mape"
+  
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_path: "logs/app.log"
+  
+# Model Persistence
+model_persistence:
+  model_dir: "models/"
+  metadata_dir: "data/processed/"
+  
+# Business Parameters
+business:
+  volatility_threshold: 0.02  # 2% daily volatility threshold
+  risk_free_rate: 0.02
+  trading_days_per_year: 252

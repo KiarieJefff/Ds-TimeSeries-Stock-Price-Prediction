@@ -1,0 +1,22 @@
+{
+    "model_type": "LinearRegression",
+    "feature": "Open Price",
+    "target": "Close Price",
+    "training_date": "2026-01-22 13:06:22",
+    "performance_metrics": {
+        "train_mse": 17.728084962225342,
+        "test_mse": 15.982929894628475,
+        "train_r2": 0.9993910417035708,
+        "test_r2": 0.9993764344697526
+    },
+    "model_coefficients": {
+        "slope": 0.9996389925941256,
+        "intercept": 0.06518604510529258
+    },
+    "data_range": {
+        "min_open": 0.377857,
+        "max_open": 692.349976,
+        "min_close": 0.372857,
+        "max_close": 691.690002
+    }
+}
